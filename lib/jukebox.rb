@@ -1,3 +1,12 @@
+# def say_hello(name)
+#   "Hi #{name}!"
+# end
+ 
+# puts "Enter your name:"
+# users_name = gets.chomp
+ 
+# puts say_hello(users_name)
+
 songs = [
   "Phoenix - 1901",
   "Tokyo Police Club - Wait Up",
@@ -10,15 +19,15 @@ songs = [
   "Amos Lee - Keep It Loose, Keep It Tight"
 ]
 
-##def say_hello(name)
- ## "Hi #{name}!"
-##end
+# THE HELP METHOD
+# This method should puts out the following:
 
-#puts "Enter your name:"
-#users_name = gets.strip
-
-#uts say_hello(users_name)
-
+  # I accept the following commands:
+  # - help : displays this help message
+  # - list : displays a list of songs you can play
+  # - play : lets you choose a song to play
+  # - exit : exits this program
+  
 def help()
   puts "I accept the following commands:"
   puts "- help : displays this help message"
@@ -27,11 +36,33 @@ def help()
   puts "- exit : exits this program"
 end
 
+#help
+
+# THE LIST METHOD
+# This method takes in an argument of the songs array of puts out the following:
+
+  # 1. Phoenix - 1901
+  # 2. Tokyo Police Club - Wait Up
+  # 3. Sufjan Stevens - Too Much
+  # 4. The Naked and the Famous - Young Blood
+  # 5. (Far From) Home - Tiga
+  # 6. The Cults - Abducted
+  # 7. Phoenix - Consolation Prizes
+  # 8. Harry Chapin - Cats in the Cradle
+  # 9. Amos Lee - Keep It Loose, Keep It Tight
+
 def list(my_songs)
   my_songs.each_with_index do |song, index|
     puts "#{index+1}. #{song}"
   end
 end
+
+#list(songs)
+
+# THE PLAY METHOD
+# This method also takes in an argument of the songs array. It first puts out the prompt: "Please enter a song name or number:". It then stores the user's response using gets.chomp.
+
+# If the user's response is a valid song number or song name, the method should puts out: "Playing <song name>". Otherwise, it should puts out: "Invalid input, please try again".
 
 def play(my_songs)
   puts "Please enter a song name or number:"
@@ -55,7 +86,13 @@ def prompt()
   gets.chomp()
 end
 
+# THE RUN METHOD
+# This method is a little trickier. It will use the other methods we built, our "helper" methods, to actually enact the running of our Jukebox.
 
+# First, this method should call on the help method to show the user the available commands. Then, it should puts out the prompt: "Please enter a command:". It should capture the user's response using gets.chomp or gets.strip.
+
+# We need to keep our program running as long as the user's input is not "exit". Use a loop to continue asking the user for input until or unless their input is "exit". Use if or case statements to determine how your program will respond to a user's input. For example, if their input is "list", call the list method, if their input is "play", call the play method, if their input is "help", call the help method and if their input is "exit", call the exit_jukebox method and break out of your loop to stop the program.
+  
 def run(my_songs)
   help()
   input = prompt()
@@ -79,3 +116,21 @@ def run(my_songs)
   
   exit_jukebox()
 end
+
+#run(songs)
+
+# def annoying_program()
+#   puts "What is your name?: "
+#   input = gets.chomp()
+  
+#   while input != "ahamed"
+#     puts "What is your name?: "
+#     input = gets.chomp()
+#   end 
+  
+#   "Goodday #{input}!"
+# end
+
+# annoying_program()
+
+
