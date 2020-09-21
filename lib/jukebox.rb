@@ -73,7 +73,9 @@ def run(my_songs)
       
     elsif input == "help"
       help()
-     
+    elsif input == "exit"
+      exit_jukebox()
+     break
     else
       puts "Invalid command"
   end
