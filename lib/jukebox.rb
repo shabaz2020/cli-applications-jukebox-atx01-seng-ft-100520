@@ -18,3 +18,6 @@ songs = [
 #users_name = gets.strip
 
 #uts say_hello(users_name)
+
+def help
+  
