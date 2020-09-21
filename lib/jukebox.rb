@@ -21,5 +21,6 @@ songs = [
 
 def help()
   puts "I accept the following commands:"
-  puts 
+  puts ": displays this help message"
+  puts ""
   
