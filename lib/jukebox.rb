@@ -19,5 +19,7 @@ songs = [
 
 #uts say_hello(users_name)
 
-def help
+def help()
+  puts "I accept the following commands:"
+  puts 
   
