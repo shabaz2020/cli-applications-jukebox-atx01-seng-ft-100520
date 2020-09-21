@@ -62,7 +62,8 @@ def run(my_songs)
   
   input = ""
   
-  while input != "exit"
+  while true do 
+    
   input = prompt()
     if input == "list"
       list(my_songs)
@@ -75,10 +76,8 @@ def run(my_songs)
      
     else
       puts "Invalid command"
-
-
-    end
   end
+end
   
   exit_jukebox()
 end
