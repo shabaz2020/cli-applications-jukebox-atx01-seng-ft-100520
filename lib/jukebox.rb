@@ -63,19 +63,20 @@ def run(my_songs)
   input = ""
   
   while input != "exit"
+  input = prompt()
     if input == "list"
       list(my_songs)
-      input = prompt()
+
     elsif input == "play"
       play(my_songs)
-      input = prompt()
+      
     elsif input == "help"
       help()
-      input = prompt()
+     
     else
       puts "Invalid command"
-      help()
-      input = prompt()
+
+
     end
   end
   
