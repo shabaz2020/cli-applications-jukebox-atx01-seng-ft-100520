@@ -32,3 +32,6 @@ def list(my_songs)
     puts "#{index+1}. #{song}"
   end
 end
+
+def play(songs)
+  puts "Please enter a song name or number:"
