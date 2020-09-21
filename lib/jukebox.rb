@@ -59,6 +59,7 @@ end
 
 
 def run(my_songs)
+  puts "Please enter a command:"
   help()
   input = prompt()
   
